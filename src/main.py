@@ -104,7 +104,7 @@ def execute_sync_action(s, cmd):
     print("\n")
 
 
-def write_to_file(cmd):
+def write_to_file(s, cmd):
     backup_stdout = sys.stdout
 
     today = datetime.today().strftime("%Y-%m-%dT%H:%M:%S")
@@ -149,7 +149,7 @@ def main():
     s = import_sync_module()
 
     if redirect_to_file:
-        write_to_file(sys.argv)
+        write_to_file(s, sys.argv)
     else:
         print("Displaying output on the terminal...")
         execute_sync_action(s, sys.argv)
