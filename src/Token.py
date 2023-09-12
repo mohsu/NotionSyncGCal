@@ -222,7 +222,8 @@ class Google:
             )
             print(f"--- Init Toke.py Google class ---")
             print(f"--- {self.service} ---")
-        except:
+        except Exception as e:
+            print(e)
             # ready to refresh the token and close the program
             print(
                 "Checking if the Google Calendar API token expires. \nRun Token.py to update the token.pkl."
